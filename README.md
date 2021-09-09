@@ -24,9 +24,9 @@
 
 ## User/Auth:
 
-### create user:
+### create user: /api/register/
 
-### login:
+### login: /api/login/
 
 ### logout:
 

@@ -12,22 +12,6 @@ class ProductViewsets(viewsets.ModelViewSet):
     queryset = Product.objects.all()
 
 
-class Product_deleteViewsets(viewsets.ModelViewSet):
-    model = Product
-    context_object_name = 'Product'
-    queryset = Product.objects.all()
-    serializer_class = productSerializer
-
-    def delete(request, id):
-        context = {}
-        obj = get_object_or_404(Product, id=id)
-
-        if request.method == "POST":
-            # delete object
-            obj.delete()
-            return HttpResponseRedirect("/")
-
-
 class CategoryViewsets(viewsets.ModelViewSet):
     serializer_class = categorySerializer
     queryset = Category.objects.all()

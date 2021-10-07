@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'store',
     'basket',
     'authuser',
+    'django_countries',
 
 ]
 
@@ -110,6 +111,8 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 
 # Internationalization

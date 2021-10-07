@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
+import datetime
 
 
 class Category(models.Model):
@@ -31,6 +32,7 @@ class Product(models.Model):
     is_active = models.BooleanField(default=True, null=True)
     created = models.DateTimeField(auto_now_add=True, null=True)
     updated = models.DateTimeField(auto_now=True, null=True)
+    users_wishlist = models.ManyToManyField(User, related_name='product', blank=True)
 
     class Meta:
         verbose_name_plural = 'Products'

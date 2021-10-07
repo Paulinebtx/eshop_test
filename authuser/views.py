@@ -3,6 +3,9 @@ from rest_framework.permissions import AllowAny
 from django.contrib.auth.models import User
 from rest_framework import viewsets, permissions, generics
 from .serializers import UserSerializer
+from store.models import Product
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import get_object_or_404
 
 
 class UserCreate(generics.CreateAPIView):
